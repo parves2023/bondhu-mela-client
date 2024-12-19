@@ -14,7 +14,7 @@ const AllMessages = () => {
   // Fetch unique conversations for the logged-in user
   useEffect(() => {
     if (user) {
-      fetch(`https://bondhu-mela.vercel.app/messages?user=${user.email}`)
+      fetch(`http://localhost:5000/messages?user=${user.email}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.success && data.users) {
@@ -36,9 +36,7 @@ const AllMessages = () => {
   // Fetch messages with a specific user
   const fetchMessagesWithUser = (email) => {
     setLoading(true);
-    fetch(
-      `https://bondhu-mela.vercel.app/messages?user=${user.email}&chatWith=${email}`
-    )
+    fetch(`http://localhost:5000/messages?user=${user.email}&chatWith=${email}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.success && data.messages) {
@@ -68,7 +66,7 @@ const AllMessages = () => {
         timestamp: new Date().toISOString(),
       };
 
-      fetch(`https://bondhu-mela.vercel.app/messages`, {
+      fetch(`http://localhost:5000/messages`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

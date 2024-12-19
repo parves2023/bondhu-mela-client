@@ -67,7 +67,7 @@ const AddVisa = () => {
     console.log("Submitting visa data:", visaData);
 
     try {
-      const response = await fetch("https://bondhu-mela.vercel.app/add-visa", {
+      const response = await fetch("http://localhost:5000/add-visa", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

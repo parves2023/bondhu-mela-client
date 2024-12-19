@@ -13,7 +13,7 @@ const GoogleLoginButton = ({ signInGoogle }) => {
         const { displayName, email, photoURL } = user;
 
         // Check if the user exists in the backend
-        fetch("https://bondhu-mela.vercel.app/users", {
+        fetch("http://localhost:5000/users", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

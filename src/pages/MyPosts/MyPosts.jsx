@@ -8,28 +8,25 @@ const MyPosts = () => {
   const [posts, setPosts] = useState([]);
   const [dataFetching, setDataFetching] = useState(true);
 
-  // Fetch only posts that match the logged-in user's email
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get(
-          "https://bondhu-mela.vercel.app/posts",
-          {
-            params: { authorEmail: user.email }, // Send the user's email as a query parameter
-          }
-        );
-        setPosts(response.data); // Set posts that match the user's email
+        if (!user || !user.uid) return; // Exit early if no user or UID is available
+        const response = await axios.get("http://localhost:5000/myposts", {
+          params: { author: user.uid }, // Send user's UID as a query parameter
+        });
+        setPosts(response.data); // Set posts that match the user's UID
       } catch (error) {
         console.error("Error fetching posts:", error);
       } finally {
         setDataFetching(false);
       }
     };
-
-    if (user) {
-      fetchPosts();
-    }
+  
+    fetchPosts(); // Call the function when `user` changes
   }, [user]);
+  
+  
 
   // Handle post deletion
   const handleDelete = async (postId) => {
@@ -45,7 +42,7 @@ const MyPosts = () => {
       if (result.isConfirmed) {
         try {
           const response = await axios.delete(
-            `https://bondhu-mela.vercel.app/posts/${postId}`
+            `http://localhost:5000/posts/${postId}`
           );
           console.log("Delete response:", response);
 

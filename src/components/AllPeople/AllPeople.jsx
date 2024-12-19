@@ -12,7 +12,7 @@ const AllPeople = () => {
   useEffect(() => {
     if (user) {
       // Make the API call to fetch users excluding the logged-in user
-      fetch(`https://bondhu-mela.vercel.app/users?email=${user.email}`)
+      fetch(`http://localhost:5000/users?email=${user.email}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.users) {

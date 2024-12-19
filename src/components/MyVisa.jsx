@@ -15,7 +15,7 @@ const MyVisa = () => {
       setDataFetching(true);
       try {
         const response = await fetch(
-          `https://bondhu-mela.vercel.app/my-visas?email=${userEmail}`
+          `http://localhost:5000/my-visas?email=${userEmail}`
         );
         const data = await response.json();
         setMyVisas(data);
@@ -43,12 +43,9 @@ const MyVisa = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const response = await fetch(
-            `https://bondhu-mela.vercel.app/visas/${id}`,
-            {
-              method: "DELETE",
-            }
-          );
+          const response = await fetch(`http://localhost:5000/visas/${id}`, {
+            method: "DELETE",
+          });
           if (response.ok) {
             setMyVisas(myVisas.filter((visa) => visa._id !== id));
             Swal.fire("Deleted!", "Your visa has been deleted.", "success");
@@ -73,7 +70,7 @@ const MyVisa = () => {
   const handleUpdate = async (updatedVisa) => {
     try {
       const response = await fetch(
-        `https://bondhu-mela.vercel.app/visas/${selectedVisa._id}`,
+        `http://localhost:5000/visas/${selectedVisa._id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

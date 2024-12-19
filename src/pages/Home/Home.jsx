@@ -37,7 +37,7 @@ const Home = () => {
   useEffect(() => {
     setDataFetching(true);
     axios
-      .get("https://bondhu-mela.vercel.app/posts")
+      .get("http://localhost:5000/posts")
       .then((response) => {
         setPosts(response.data);
         setDataFetching(false);
@@ -66,9 +66,10 @@ const Home = () => {
         authorName: user.displayName || "Anonymous", // Use displayName if available, else default to "Anonymous"
         date: new Date().toISOString(), // Add current date to the post
       };
+      
 
       // Send the post data to the backend
-      await axios.post("https://bondhu-mela.vercel.app/posts", postData);
+      await axios.post("http://localhost:5000/posts", postData);
 
       // Reset the form fields and show success message
       setNewPostText("");
@@ -77,7 +78,7 @@ const Home = () => {
 
       // Optionally, refetch posts to include the new one
       setDataFetching(true);
-      const response = await axios.get("https://bondhu-mela.vercel.app/posts");
+      const response = await axios.get("http://localhost:5000/posts");
       setPosts(response.data);
       setDataFetching(false);
     } catch (error) {

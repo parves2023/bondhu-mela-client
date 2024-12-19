@@ -18,7 +18,7 @@ const ChatModal = ({ chatWith, closeChat }) => {
       };
 
       // Send message to backend
-      fetch("https://bondhu-mela.vercel.app/messages", {
+      fetch("http://localhost:5000/messages", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

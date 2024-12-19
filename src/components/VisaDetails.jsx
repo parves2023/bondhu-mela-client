@@ -26,9 +26,7 @@ const VisaDetails = () => {
   useEffect(() => {
     const fetchVisa = async () => {
       try {
-        const response = await fetch(
-          `https://bondhu-mela.vercel.app/visas/${_id}`
-        );
+        const response = await fetch(`http://localhost:5000/visas/${_id}`);
         const data = await response.json();
         setVisa(data);
         setLoading(false);
@@ -61,14 +59,11 @@ const VisaDetails = () => {
     console.log(application);
 
     try {
-      const response = await fetch(
-        "https://bondhu-mela.vercel.app/applications",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(application),
-        }
-      );
+      const response = await fetch("http://localhost:5000/applications", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(application),
+      });
 
       if (response.ok) {
         toast.success("Application submitted successfully!");

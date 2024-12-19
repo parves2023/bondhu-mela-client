@@ -24,7 +24,7 @@ const MyVisaApplications = () => {
 
       try {
         const response = await fetch(
-          `https://bondhu-mela.vercel.app/applications/${user.email}`
+          `http://localhost:5000/applications/${user.email}`
         ); // Fetch applications based on user's email
         if (response.ok) {
           const data = await response.json();
@@ -75,7 +75,7 @@ const MyVisaApplications = () => {
       if (result.isConfirmed) {
         try {
           const response = await fetch(
-            `https://bondhu-mela.vercel.app/applications/${id}`,
+            `http://localhost:5000/applications/${id}`,
             {
               method: "DELETE",
             }

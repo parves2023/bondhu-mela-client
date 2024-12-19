@@ -26,7 +26,7 @@ function AllVisa() {
     const fetchVisas = async () => {
       setDataFetching(true);
       try {
-        const response = await fetch("https://bondhu-mela.vercel.app/visas");
+        const response = await fetch("http://localhost:5000/visas");
         if (response.ok) {
           const data = await response.json();
           setVisas(data);

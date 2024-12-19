@@ -9,7 +9,7 @@ const AddReview = () => {
       image: form.image.value,
     };
 
-    fetch("https://bondhu-mela.vercel.app/reviews", {
+    fetch("http://localhost:5000/reviews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newReview),
