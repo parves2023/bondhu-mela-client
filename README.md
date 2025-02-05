@@ -1,108 +1,84 @@
-# VisaPilot
+# BondhuMela Social Platform
 
-Your ultimate solution for seamless visa applications and affordable flight bookings! Explore, apply, and travel the world with confidence.
+BondhuMela is a social media platform designed to connect friends, family, and loved ones seamlessly. Share your thoughts, create new friendships, and strengthen bonds through a vibrant and interactive platform.
+
+---
 
 ## 🌐 Live Demo
-Visit [VisaPilot](https://bondhumela.netlify.app/) 
+Visit [BondhuMela](https://bondhumela.netlify.app/)
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-### Seamless Visa Applications
-- Simplified visa application process with expert guidance.
-- Minimal hassle for users to complete their applications.
-
-### Latest Visa Updates
-- Stay informed about the latest visa requirements for popular travel destinations.
-
-### Affordable Flight Bookings
-- Find and compare flight deals for your dream destinations.
-- Enjoy exclusive discounts on flight bookings.
-
-### Interactive UI/UX
-- Responsive, user-friendly design for optimal experience across devices.
-
-### Dark/Light Theme Toggle
-- Choose your preferred theme optimized for both day and night usage.
-
-### Lottie Animations and Reveals
-- Visually appealing animations powered by Lottie and React Awesome Reveal.
+- **Create New Posts:** Share your thoughts and ideas easily.
+- **Image Uploads:** Post images by dragging and dropping files.
+- **Real-time Updates:** See new posts as they are added.
+- **Multi-language Content:** Platform content in both Bengali and English.
+- **User Profiles:** View and interact with other users' posts.
+- **Responsive UI:** Optimized for all screen sizes.
 
 ---
 
-## 🚀 Technologies Used
+## 📆 Technologies Used
 
 - **Frontend:** React.js, Tailwind CSS
-- **Backend:** Express.js, MongoDB Atlas
-- **Animations:** Lottie React, React Awesome Reveal
-- **State Management:** Context API
+- **Backend:** Firebase
 - **Hosting:** Netlify
-- **Backend Hosting:** Vercel
+- **State Management:** Context API
 
 ---
 
-## 📦 Installation and Setup
+## 📄 Project Setup
 
 ### Prerequisites
-Ensure you have the following installed:
-- Node.js
-- MongoDB Atlas (or local MongoDB setup)
+Ensure you have Node.js installed.
 
-### Steps to Run Locally
+### Installation
 
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd visapilot
+   cd bondhumela
    ```
 
-2. Install dependencies for frontend and backend:
+2. Install dependencies:
    ```bash
    npm install
-   cd client && npm install
    ```
 
-3. Create environment files (`.env`) for backend configurations:
-   ```env
-   MONGO_URI=<Your MongoDB Atlas URL>
-   PORT=5000
-   ```
-
-4. Start the development server:
+3. Start the development server:
    ```bash
    npm run dev
    ```
 
-5. Access the application at `http://localhost:3000`
+4. Open the application at `http://localhost:3000`
 
 ---
 
-## 🛠 Project Structure
-```
-visapilot/
-├── client/       # React.js frontend code
-├── server/       # Express.js backend code
-├── public/       # Static assets
-├── .env          # Environment variables
-├── package.json # Project dependencies
-```
+## 🌟 Future Improvements
+
+- **Enhanced Security:** Implement user authentication and verification.
+- **Private Messaging:** Enable secure one-on-one chats between users.
+- **Post Reactions:** Allow users to react to posts with emojis.
+- **Notification System:** Alert users to new posts, comments, and likes.
+- **Dark Mode:** Provide a dark mode for comfortable browsing.
 
 ---
 
-## 💡 Features to Implement
-- Visa Application Status Tracking
-- Secure Document Upload System
-- Currency Converter for Travel Convenience
-- Multilingual Support
+## 🛠 Available Scripts
+
+- `npm run dev`: Start the development server
+- `npm run build`: Build the application for production
+- `npm run preview`: Preview the production build
+- `npm run lint`: Lint the code using ESLint
 
 ---
 
 ## 📧 Contact
-Feel free to reach out for feedback or inquiries:
+For any inquiries or feedback:
+- **Owner:** Parves Mosarof
 - **Email:** [parvesmosarof2@gmail.com](mailto:parvesmosarof2@gmail.com)
-- **Bondhumela App:** [Visit Bondhumela](https://bondhumela.netlify.app/)
-  - A social media platform for chatting, posting, and sharing notes.
 
 ---
 
